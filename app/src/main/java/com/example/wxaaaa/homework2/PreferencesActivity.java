@@ -94,6 +94,12 @@ public class PreferencesActivity extends PreferenceActivity {
                 }
                 else {
                     Toast.makeText(this.getContext(), preference.getTitle() + "已禁用", Toast.LENGTH_LONG).show();
+                    if (preference.equals(wifi)){
+                        wifi_setting.setSummary("设置和管理无线接入点");
+                    }
+                    if (preference.equals(bluetooth)){
+                        bluetooth_setting.setSummary("管理连接、设备设备名称和可检测性");
+                    }
                 }
             }
             return true;
